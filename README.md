@@ -1,5 +1,5 @@
 ## Install
-With [node](http://nodejs.org/) and [phantomjs](http://phantomjs.org/) installed:
+With [node](http://nodejs.org/) installed:
 ````
 npm install
 bower install
