@@ -7,4 +7,4 @@
 var course = require('./views/course').render;
 
 // init course view
-course();
+course();  
