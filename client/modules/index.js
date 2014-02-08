@@ -4,7 +4,7 @@
  * Module dependencies
  */
 
-var course = require('./modules/views/course').render;
+var course = require('./views/course').render;
 
 // init course view
 course();   

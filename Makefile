@@ -12,7 +12,7 @@ all default : \
 build build/scripts build/scripts/vendor:
 	mkdir -p $@
 
-build/scripts/application.js : client/index.js | build/scripts
+build/scripts/application.js : client/modules/index.js | build/scripts
 	browserify -d $< > $@
 
 build/scripts/vendor/backbone-1.1.0-min.js : | build/scripts/vendor
