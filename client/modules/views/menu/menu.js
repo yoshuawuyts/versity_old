@@ -9,7 +9,7 @@
  */
 
 module.exports = React.createClass({
-  displayName: 'deleteButton',
+  displayName: 'menu',
 
   render: function() {
     return (
