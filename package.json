@@ -1,0 +1,28 @@
+{
+  "name": "Versity",
+  "version": "0.0.0",
+  "description": "Making education efficient and insightful",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoshuawuyts/versity.git"
+  },
+  "author": "",
+  "license": "None",
+  "bugs": {
+    "url": "https://github.com/yoshuawuyts/versity/issues"
+  },
+  "homepage": "https://github.com/yoshuawuyts/versity",
+  "dependencies": {
+    "koa-response-time": "~1.0.1",
+    "koa-logger": "~1.1.1",
+    "koa-compress": "~1.0.2",
+    "koa-mount": "~1.2.3",
+    "koa-static": "~1.4.2",
+    "koa": "~0.3.0",
+    "koa-router": "~3.0.1"
+  }
+}
