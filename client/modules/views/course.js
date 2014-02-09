@@ -12,7 +12,9 @@ var asideComponent = require('./course/aside');
  * View
  */
 
-var course = React.createClass({displayName: 'Course',
+var course = React.createClass({
+  displayName: 'course',
+  
   render: function() {
     return (
       React.DOM.div( {className: 'row'},
