@@ -13,7 +13,6 @@ build build/scripts build/scripts/vendor:
 	mkdir -p $@
 
 build/scripts/application.js : client/modules/index.js | build/scripts
-
 	browserify -d $< > $@
 
 build/scripts/vendor/backbone-1.1.0-min.js : | build/scripts/vendor
@@ -29,7 +28,7 @@ build/scripts/vendor/react-0.8.0-min.js : | build/scripts/vendor
 	curl -s https://raw.github.com/facebook/react-bower/v0.8.0/react.min.js -o $@
 
 build/index.html : client/index.html | build
-	cp $< $@
+	cp $^ $@
 
 clean :
 	rm -r build
