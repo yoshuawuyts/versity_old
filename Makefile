@@ -13,7 +13,8 @@ build build/scripts build/scripts/vendor:
 	mkdir -p $@
 
 build/scripts/application.js : client/modules/index.js | build/scripts
-	browserify -d $< | uglifyjs > $@
+
+	browserify -d $< > $@
 
 build/scripts/vendor/backbone-1.1.0-min.js : | build/scripts/vendor
 	curl -s https://raw.github.com/jashkenas/backbone/1.1.0/backbone-min.js -o $@

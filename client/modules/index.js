@@ -1,50 +1,41 @@
-(function () {
-  var CourseModel = Backbone.Model.extend({
-    defaults: {
-      id: 0,
-      name: "",
-      institute: 0,
-      date: {
-        start: new Date(),
-        end: new Date()
-      },
-      creator: 0
-    }
-  });
+'use strict';
 
-  var CourseCollection = Backbone.Collection.extend({
-    model: CourseModel
-  });
+/**
+ * Module dependencies
+ */
 
-  var CourseView = Backbone.View.extend({
-    target: document.body,
+var course = require('./views/course');
+var unit = require('./views/unit');
 
-    template: React.createClass({
-      render: function () {
-        return React.DOM.a({
-          href: "#"
-        }, courseCollection.models[0].get("name"));
-      }
-    }),
+/**
+ * Routes
+ */ 
 
-    initialize: function () {
-      this.render();
-    },
+var Router = Backbone.Router.extend({
+  routes: {
+    '': 'course',
+    ':user/:course/:unit': 'unit'
+  },
+  course: function() {
+    console.log('course');
+    course();
+  },
+  unit: function() {
+    console.log('unit'); 
+    unit();
+  }
+});
 
-    render: function () {
-      React.renderComponent(this.template({}), this.target);
+/**
+ * Init router
+ */
 
-      return this;
-    }
-  });
+var router = new Router();
 
-  var courseModel = new CourseModel({
-    id: 1,
-    name: "Introduction To Programming",
-    institute: 1
-  });
+/**
+ * Options
+ */
 
-  var courseCollection = new CourseCollection([courseModel]);
-
-  var courseView = new CourseView({});
-})();
+Backbone.history.start({
+  pushState: true
+});
