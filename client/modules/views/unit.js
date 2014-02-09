@@ -5,8 +5,6 @@
  */
 
 var menuComponent = require('./menu/menu');
-var mainComponent = require('./course/main');
-var asideComponent = require('./course/aside');
 
 /**
  * View
@@ -19,8 +17,11 @@ var course = React.createClass({
     return (
       React.DOM.div( {className: 'row'},
         menuComponent(),
-        mainComponent(),
-        asideComponent()
+        React.DOM.div({className: '6of8'},
+          React.DOM.h1(null, 'How to bake bread'),
+          React.DOM.h3(null, 'An essay on good dough and fine bakery'),
+          React.DOM.p(null, 'Lorem ipsum dolor sit amet')
+        )
       )
     );
   }
