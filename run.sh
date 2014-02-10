@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 
-NODE_ENV=development; export NODE_ENV
-PORT=1337 ; export PORT
+export NODE_ENV=development;
+export PORT=1337 ;
 node --harmony server/index.js
