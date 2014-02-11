@@ -24,5 +24,18 @@
     "koa": "~0.3.0",
     "koa-router": "~3.0.1",
     "koa-send": "~1.2.2"
+  },
+  "devDependencies": {
+    "gulp": "~3.5.2",
+    "rework-breakpoints": "~0.6.0",
+    "rework-vars": "~2.0.2",
+    "gulp-rename": "~1.0.0",
+    "rework-npm": "~0.4.0",
+    "gulp-mocha": "~0.4.1",
+    "gulp-rework": "~0.2.1",
+    "gulp-uglify": "~0.2.1",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-browserify": "~0.4.4",
+    "gulp-csso": "~0.2.3"
   }
 }
