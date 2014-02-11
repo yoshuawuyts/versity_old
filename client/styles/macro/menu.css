@@ -1,0 +1,16 @@
+menu {
+  height: 100vh;
+}
+
+.notification-canvas {
+  height: 100vh;
+}
+
+div[role='logo'] {
+  height: 94px;
+}
+
+button[role='menu-item']{
+  height:60px;
+  border-bottom: 1px #fff;
+}
