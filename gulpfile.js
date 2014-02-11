@@ -44,7 +44,12 @@ gulp.task('Perform tests', function () {
 });
 
 gulp.task('Copy client-side JavaScript libraries', function () {
-  gulp.src("client/vendor/**/*min.js").pipe(gulp.dest("build/js"));
+  gulp.src("client/vendor/backbone/backbone-min.js").pipe(gulp.dest("build/js"));
+  gulp.src("client/vendor/backbone/backbone-min.map").pipe(gulp.dest("build/js"));
+  gulp.src("client/vendor/jquery/jquery.min.js").pipe(gulp.dest("build/js"));
+  gulp.src("client/vendor/jquery/jquery.min.map").pipe(gulp.dest("build/js"));
+  gulp.src("client/vendor/lodash/dist/lodash.underscore.min.js").pipe(gulp.dest("build/js"));
+  gulp.src("client/vendor/react/react.min.js").pipe(gulp.dest("build/js"));
 });
 
 gulp.task('default', [
