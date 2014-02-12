@@ -20,8 +20,10 @@ var course = React.createClass({
       React.DOM.div( null,
         menuComponent(),
         React.DOM.div ({className: 'container grid'},
-          learnComponent(),
-          teachComponent()
+          React.DOM.div({className: 'row'},
+            learnComponent(),
+            teachComponent()
+          )
         )
       )
     );

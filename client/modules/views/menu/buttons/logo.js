@@ -15,7 +15,9 @@ module.exports = React.createClass({
   render: function() {
     return (
       React.DOM.a( {href:"/", onClick: this.clickHandler},
-        React.DOM.div({role:"logo"}, "logo")
+        React.DOM.div({role:"logo"}, 
+          React.DOM.img({src: 'logo.svg', alt: 'logo'})
+        )
       )
     );
   }
