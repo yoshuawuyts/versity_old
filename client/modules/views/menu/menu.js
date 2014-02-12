@@ -4,12 +4,10 @@
  * Module dependencies
  */
 
-var logoComponent = require('./buttons/logo');
-var learnComponent = require('./buttons/learn');
-var newComponent = require('./buttons/new');
 var searchComponent = require('./buttons/search');
-var teachComponent = require('./buttons/teach');
+var logoComponent = require('./buttons/logo');
 var userComponent = require('./buttons/user');
+var newComponent = require('./buttons/new');
 
 /**
  * View
@@ -25,8 +23,6 @@ module.exports = React.createClass({
         React.DOM.ul( null,
           userComponent(),
           newComponent(),
-          learnComponent(),
-          teachComponent(),
           searchComponent(),
           React.DOM.li(null,
             React.DOM.div(null)
