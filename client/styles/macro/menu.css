@@ -6,6 +6,14 @@ menu {
 
 div[role='logo'] {
   height: 94px;
+  display: flex;
+}
+
+img[role='logo']{
+  display: block;
+  width:200px;
+  margin:auto;
+  justify-content: center;
 }
 
 button[role='menu-item']{
