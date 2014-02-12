@@ -4,6 +4,7 @@
  * Module dependencies
  */
 
+var newCourse = require('./views/new');
 var settings = require('./views/settings');
 var course = require('./views/course');
 var login = require('./views/login');
@@ -17,6 +18,7 @@ var unit = require('./views/unit');
 var Router = Backbone.Router.extend({
   routes: {
     '': 'home',
+    'new': 'newCourse',
     'login': 'login',
     'settings': 'settings',
     ':user': 'user',
@@ -24,6 +26,7 @@ var Router = Backbone.Router.extend({
     ':user/:course/:unit': 'unit'
   },
   home: function() { home(); },
+  newCourse: function() { newCourse(); },
   login: function() { login(); },
   settings: function() { setings(); },
   user: function() { user(); },
