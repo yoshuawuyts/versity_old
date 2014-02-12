@@ -1,10 +1,13 @@
-'use strict';
+'use strict'; 
 
 /**
  * Module dependencies
  */
 
+var settings = require('./views/settings');
 var course = require('./views/course');
+var login = require('./views/login');
+var home = require('./views/home');
 var unit = require('./views/unit');
 
 /**
@@ -13,17 +16,19 @@ var unit = require('./views/unit');
 
 var Router = Backbone.Router.extend({
   routes: {
-    '': 'course',
+    '': 'home',
+    'login': 'login',
+    'settings': 'settings',
+    ':user': 'user',
+    ':user/:course': 'course',
     ':user/:course/:unit': 'unit'
   },
-  course: function() {
-    console.log('course');
-    course();
-  },
-  unit: function() {
-    console.log('unit'); 
-    unit();
-  }
+  home: function() { home(); },
+  login: function() { login(); },
+  settings: function() { setings(); },
+  user: function() { user(); },
+  course: function() { course(); },
+  unit: function() { unit(); }
 });
 
 /**

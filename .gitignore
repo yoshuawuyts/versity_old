@@ -19,4 +19,4 @@ node_modules
 #folders
 build
 .tmp
-assets/vendor
+client/vendor
