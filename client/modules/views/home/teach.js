@@ -4,8 +4,7 @@
  * Module dependencies
  */
 
-var courseComponent = require('./learn/component')
-var chartComponent = require('./learn/chart');
+var courseComponent = require('./teach/component')
 
 /**
  * View
@@ -16,7 +15,7 @@ module.exports = React.createClass({
 
   render: function() {
     return (
-      React.DOM.div({className: 'size1of2'},
+      React.DOM.div({className: 'size1of2 teach'},
         courseComponent(),
         courseComponent(),
         courseComponent(),

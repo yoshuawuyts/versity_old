@@ -1,9 +1,25 @@
-.learn-chart {
-  height: 180px;
-  margin-bottom: 12px;
+.teach {
+  margin-top: 18px;
 }
 
-.learn-component {
-  height: 72px;
-  margin-bottom: 12px;
+.home-learn-chart {
+  height: 192px;
+  margin-top: 30px;
+}
+
+.home-component {
+  height: 90px;
+  margin-top: 12px;
+}
+
+.home-teach-button {
+  padding-left: 0;
+  padding-right: 0;
+  height: 90px;
+  position: relative;
+}
+
+.home-teach-button > button {
+  position: relative;
+  height: 100%;
 }
