@@ -1,33 +1,45 @@
 'use strict';
 
-var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
+var breakpoints = require('rework-breakpoints');
 var browserify = require('gulp-browserify');
-var csso = require('gulp-csso');
-var mocha = require('gulp-mocha');
+var eslint = require('gulp-eslint');
 var rename = require('gulp-rename');
 var rework = require('gulp-rework');
 var uglify = require('gulp-uglify');
-var breakpoints = require('rework-breakpoints');
-var npm = require('rework-npm');
+var mocha = require('gulp-mocha');
 var vars = require('rework-vars');
+var csso = require('gulp-csso');
+var npm = require('rework-npm');
+var gulp = require('gulp');
 
-gulp.task('Compile and compress modules', function () {
+gulp.task('modules', function() {
   gulp
     .src('client/modules/index.js')
     .pipe(browserify({buffer: false, debug: true}))
-    .pipe(uglify({outSourceMap: true}))
+//    .pipe(uglify({outSourceMap: true}))
     .pipe(rename('application.js'))
     .pipe(gulp.dest('build/scripts/'));
 });
 
-gulp.task('Copy static assets', function () {
+gulp.task('static', function() {
   gulp.src('client/index.html').pipe(gulp.dest('build/'));
   gulp.src('client/fonts/**').pipe(gulp.dest('build/fonts'));
   gulp.src('client/images/**').pipe(gulp.dest('build/images/'));
+  gulp.src("client/vendor/backbone/backbone-min.js").pipe(gulp.dest("build/vendor"));
+  gulp.src("client/vendor/backbone/backbone-min.map").pipe(gulp.dest("build/vendor"));
+  gulp.src("client/vendor/jquery/jquery.min.js").pipe(gulp.dest("build/vendor"));
+  gulp.src("client/vendor/jquery/jquery.min.map").pipe(gulp.dest("build/vendor"));
+  gulp.src("client/vendor/lodash/dist/lodash.underscore.min.js").pipe(gulp.dest("build/vendor"));
+  gulp.src("client/vendor/react/react.min.js").pipe(gulp.dest("build/vendor"));
 });
 
-gulp.task('Compile stylesheets', function () {
+gulp.task('lint', function() {
+  gulp.src(['client/modules/*.js', 'client/modules/**/*.js', 'client/modules/**/**/*.js'])
+    .pipe(eslint.format('stylish'))
+})
+
+gulp.task('styles', function() {
   gulp
     .src('client/styles/index.css')
     .pipe(rework(npm(), vars(), rework.colors(), rework.extend(), breakpoints))
@@ -37,20 +49,15 @@ gulp.task('Compile stylesheets', function () {
     .pipe(gulp.dest('build/styles'));
 });
 
-gulp.task('Perform tests', function () {
+gulp.task('tests', function() {
   gulp
     .src('tests/index.js')
     .pipe(mocha({ui: 'bdd', reporter: 'dot', globals: []}));
 });
 
-gulp.task('Copy client-side JavaScript libraries', function () {
-  gulp.src("client/vendor/**/*min.js").pipe(gulp.dest("build/js"));
-});
-
 gulp.task('default', [
-  'Compile and compress modules',
-  'Copy static assets',
-  'Compile stylesheets',
-  'Perform tests',
-  'Copy client-side JavaScript libraries'
+  'modules',
+  'static',
+  'styles',
+  'tests'
 ]);

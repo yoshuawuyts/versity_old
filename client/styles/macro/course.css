@@ -1,0 +1,32 @@
+object[role='chapter']{
+  height: 80px;
+  margin-bottom: 12px;
+}
+
+a[role='chapter-button'] > button{
+  height:80px;
+}
+
+div[role='aside-object'] {
+  margin-bottom: 12px;
+}
+
+button {
+  border: 0;
+}
+
+h3[role='section-header']{
+  margin-bottom: 6px;
+}
+
+header[role='course-header']{
+  margin-bottom: 18px;
+}
+
+aside {
+  position: right;
+}
+
+label[role='deadline-date']{
+  right:0px;
+}
