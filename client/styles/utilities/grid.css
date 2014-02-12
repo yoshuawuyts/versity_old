@@ -143,3 +143,17 @@
     width: 100%;
   }
 }
+
+/**
+ * Base container
+ */
+
+.container-outer {
+  width: 100%;
+}
+
+.container {
+  margin: auto;
+  width: 1030px;
+  height: 100vh;
+}

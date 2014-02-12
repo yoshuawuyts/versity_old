@@ -20,16 +20,16 @@ module.exports = React.createClass({
 
   render: function() {
     return (
-      React.DOM.menu({className: "size1of8 left"},
+      React.DOM.menu({className: 'bgshade3'},
         logoComponent(),
-        React.DOM.ul( {className:"pl"},
+        React.DOM.ul( null,
           userComponent(),
           newComponent(),
           learnComponent(),
           teachComponent(),
           searchComponent(),
           React.DOM.li(null,
-            React.DOM.div( {className:"size1of1 bgshade5 notification-canvas"})
+            React.DOM.div(null)
           )
         )
       )

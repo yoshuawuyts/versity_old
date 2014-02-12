@@ -4,9 +4,9 @@
  * Module dependencies
  */
 
-var menuComponent = require('./menu/menu');
-var mainComponent = require('./course/main');
 var asideComponent = require('./course/aside');
+var mainComponent = require('./course/main');
+var menuComponent = require('./menu/menu');
 
 /**
  * View
