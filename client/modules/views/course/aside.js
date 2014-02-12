@@ -17,7 +17,7 @@ module.exports = React.createClass({
 
   render: function() {
     return (
-      React.DOM.aside( {className:"size2of8"},
+      React.DOM.aside( {className:"size3of8"},
         aboutComponent(),
         deadlinesComponent(),
         archiveComponent()

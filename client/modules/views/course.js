@@ -17,10 +17,14 @@ var course = React.createClass({
   
   render: function() {
     return (
-      React.DOM.div( {className: 'row'},
+      React.DOM.div( null,
         menuComponent(),
-        mainComponent(),
-        asideComponent()
+        React.DOM.div ({className: 'container grid'},
+          React.DOM.div({className: 'row'},
+            mainComponent(),
+            asideComponent()
+          )
+        )
       )
     );
   }
