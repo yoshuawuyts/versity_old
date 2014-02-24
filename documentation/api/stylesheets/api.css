@@ -1,0 +1,82 @@
+body {
+  color: #000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.1em;
+  margin: 0 auto;
+  padding: 10px;
+  width: 1140px;
+}
+
+body div:first-child {
+  position: absolute;
+  width: 1120px;
+}
+
+nav#outline {
+  width: 455px;
+  top: 40px;
+  position: fixed;
+}
+
+section#content {
+  top: 40px;
+  left: 475px;
+  width: 645px;
+  position: absolute;
+}
+
+a, a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+code {
+  font-family: Menlo, Consolas, monospace;
+  font-size: 13px;
+  white-space: pre;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+h2 {
+  font-size: 10px;
+}
+
+ol ol {
+  margin: 0 0 0 1em;
+}
+
+p {
+  margin: 0 0 10px 0;
+}
+
+section {
+  margin: 0 0 20px 0;
+}
+
+.resource {
+  font-family: Menlo, Consolas, monospace;
+}
+
+a.resource {
+  font-size: 0.8em;
+}
+
+h1.resource {
+  font-size: 16px;
+}
+
+.method {
+  margin: 0 0.3em 0 0;
+}
+
+.format, .id {
+  background-color: #F4F4F4;
+  padding: 0.1em 0.2em;
+  border-radius: 0.2em;
+}
