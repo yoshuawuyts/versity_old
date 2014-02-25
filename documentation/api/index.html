@@ -110,7 +110,7 @@
               <h2>Description</h2>
               <p>Returns information about a user.</p>
               <h2>Example</h2>
-              <code>...</code>
+              <code>{<br/>  "id": 1,<br/>  "username": "dv",<br/>  "name": {<br/>    "first": "Dennis",<br/>    "last": "Vennink"<br/>  },<br/>  "biography": "Interested in learning more about software development.",<br/>  "location": {<br/>    "city": "Rotterdam",<br/>    "country": "The Netherlands"<br/>  },<br/>  "organisations": [1],<br/>  "websites": [<br/>    {</br>      "name": "Portfolio",<br/>      "url": "http://dennisvennink.com"<br/>    }<br/>  ],<br/>  "online": true<br/>}</code>
             </section>
             <section id="resource:users-id-courses">
               <h1 class="resource"><span class="method">GET</span>/users/courses.<span class="format">format</span></h1>
@@ -152,7 +152,7 @@
               <h2>Description</h2>
               <p>Returns the progression of a course followed by a user.</p>
               <h2>Example</h2>
-              <code>{<br/>  "id": 12345,<br/>  "course_id": 123,<br/>  "user_id": 12,<br/>  "isCompleted": true,<br/>  "completionDate": "2014-02-23T23:45:39Z"<br/>}</code>
+              <code>{<br/>  "id": 12345,<br/>  "type": "course",</br>  "course_id": 123,<br/>  "user_id": 12,<br/>  "isCompleted": true,<br/>  "date": {</br>    "creation": "2014-02-23T23:45:39Z",</br>    "completion": "2014-02-23T23:45:39Z"</br>  }<br/>}</code>
             </section>
             <section id="resource:users-progressions-curricula">
               <h1 class="resource"><span class="method">GET</span>/users/progressions/curricula.<span class="format">format</span></h1>
