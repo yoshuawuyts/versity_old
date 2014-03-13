@@ -119,7 +119,7 @@
           "response": {
             "id": 1,
             "title": "Computer Science",
-            "description": "My fancy description",
+            "description": "My fancy description.",
             "owner": {
               "type": "organisation",
               "id": 1
@@ -143,7 +143,7 @@
           "response": {
             "id": 1,
             "title": "Algorithms 1",
-            "description": "My fancy description",
+            "description": "My fancy description.",
             "owner": {
               "type": "organisation",
               "id": 1
@@ -151,7 +151,7 @@
             "admins": [1],
             "children": [1, 2, 3, 4],
             "parents": [1, 2],
-            "deadline": 604800,
+            "duration": 7889230,
             "private": false
           }
         }
@@ -169,7 +169,7 @@
           "response": {
             "id": 1,
             "title": "Introduction",
-            "description": "My fancy description",
+            "description": "My fancy description.",
             "owner": {
               "type": "user",
               "id": 1
@@ -177,7 +177,9 @@
             "admins": [1],
             "children": [1, 2],
             "parents": [1],
-            "deadline": 604800,
+            "deadline": {
+              "description": "My fancy description."
+              "duration": 604800
             "private": false
           }
         }
