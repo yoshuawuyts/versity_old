@@ -15,6 +15,7 @@
               "last": "Vennink"
             },
             "gender": "male",
+            "email": "d.vennink@student.tudelft.nl",
             "biography": "Interested in learning more about software development.",
             "location": {
               "city": "Rotterdam",
@@ -37,8 +38,8 @@
               "managed": [1],
               "taking": [1]
             },
-            "following": [1],
-            "followers": [1]
+            "following": [2],
+            "followers": [2],
             "count": {
               "courses": {
                 "managed": 1,
@@ -49,7 +50,7 @@
             },
             "date": {
               "creation": "2014-08-07T00:56:25Z",
-              "modified": "2014-08-07T00:56:25Z",
+              "modified": "2014-08-07T00:56:25Z"
             }
           }
         }
@@ -79,10 +80,20 @@
             "count": {
               "members": 1
             },
+            "courses": {
+              "managed": [1]
+            },
+            "followers": 1,
             "members": [1],
+            "count": {
+              "courses": {
+                "managed": 1,
+              },
+              "followers": 1
+            },
             "date": {
               "creation": "2014-08-07T00:56:25Z",
-              "modified": "2014-08-07T00:56:25Z",
+              "modified": "2014-08-07T00:56:25Z"
             },
             "private": false
           }
