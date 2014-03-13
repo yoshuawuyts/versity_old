@@ -15,7 +15,9 @@
               "last": "Vennink"
             },
             "gender": "male",
-            "email": "d.vennink@student.tudelft.nl",
+            "contact": {
+              "email": "d.vennink@student.tudelft.nl"
+            },
             "biography": "Interested in learning more about software development.",
             "location": {
               "city": "Rotterdam",
@@ -70,11 +72,19 @@
             "name": "University of Amsterdam",
             "type": "Institute",
             "location": {
+              "address": "Spui 21",
+              "zip": "1012 WX",
               "city": "Amsterdam",
               "country": "The Netherlands"
             },
+            "websites": [
+              {
+                "title": "University of Amsterdam",
+                "url": "http://uva.nl"
+              }
+            ],
             "contact": {
-              "address": "Spui 21",
+              "email": "info@uva.nl",
               "telephone": "31 20 5259111"
             },
             "count": {
