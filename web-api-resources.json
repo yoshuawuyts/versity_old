@@ -150,6 +150,12 @@
             },
             "admins": [1],
             "children": [1, 2, 3, 4],
+            "deadlines": [
+              {
+                "id": 1,
+                "interval": 604800
+              }
+            ],
             "private": false
           }
         }
