@@ -153,6 +153,7 @@
             "deadlines": [
               {
                 "id": 1,
+                "description": "My fancy description",
                 "timeFromStart": 604800
               }
             ],
