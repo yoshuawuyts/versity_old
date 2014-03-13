@@ -119,6 +119,7 @@
           "response": {
             "id": 1,
             "title": "Computer Science",
+            "admins": [1],
             "children": [1]
           }
         }
