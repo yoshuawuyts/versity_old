@@ -84,7 +84,8 @@
               "managed": [1]
             },
             "followers": 1,
-            "members": [1],
+            "admins": [1],
+            "members": [1, 2],
             "count": {
               "courses": {
                 "managed": 1,
