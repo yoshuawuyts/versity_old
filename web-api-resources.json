@@ -151,13 +151,10 @@
             "admins": [1],
             "children": [1, 2, 3, 4],
             "parents": [1, 2],
-            "deadlines": [
-              {
-                "id": 1,
-                "description": "My fancy description",
-                "timeFromStart": 604800
-              }
-            ],
+            "deadline": {
+              "description": "My fancy description",
+              "timeFromStart": 604800
+            },
             "private": false
           }
         }
@@ -175,7 +172,19 @@
           "response": {
             "id": 1,
             "title": "Introduction",
-            "children": [1, 2, 3, 4]
+            "description": "My fancy description",
+            "owner": {
+              "type": "user",
+              "id": 1
+            },
+            "admins": [1],
+            "children": [1, 2],
+            "parents": [1],
+            "deadline": {
+              "description": "My fancy description",
+              "timeFromStart": 604800
+            },
+            "private": false
           }
         }
       }
