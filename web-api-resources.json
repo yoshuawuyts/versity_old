@@ -196,7 +196,7 @@
             "id": 1,
             "title": "Why Study Algorithms?",
             "description": "My fancy description.",
-            "type": "text",
+            "type": "markdown",
             "content": "Markdown text",
             "owner": {
               "type": "user",
@@ -212,7 +212,7 @@
     ]
   },
   {
-    "endpoint": "/1/progressions/:progression-id.format",
+    "endpoint": "/1/progress/:progress-id.format",
     "resources": [
       {
         "method": "GET",
