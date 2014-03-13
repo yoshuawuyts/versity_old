@@ -113,7 +113,7 @@
     "resources": [
       {
         "method": "GET",
-        "description": "Returns information about a curriculum. A curriculum contains one or more courses.",
+        "description": "Returns information about a programme. A programme contains one or more courses.",
         "examples": {
           "request": "curl https://api.versity.io/1/curricula/1.json",
           "response": {
