@@ -189,14 +189,23 @@
     "resources": [
       {
         "method": "GET",
-        "description": "Returns information about a unit. A unit is the lowest ",
+        "description": "Returns information about a unit.",
         "examples": {
           "request": "curl https://api.versity.io/1/units/1.json",
           "response": {
             "id": 1,
             "title": "Why Study Algorithms?",
+            "description": "My fancy description.",
+            "type": "text",
             "content": "Markdown text",
-            "children": []
+            "owner": {
+              "type": "user",
+              "id": 1
+            },
+            "admins": [1],
+            "children": [1, 2],
+            "parent": 1,
+            "private": false
           }
         }
       }
