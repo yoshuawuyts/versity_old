@@ -1,0 +1,181 @@
+[
+  {
+    "endpoint": "/1/users/:user-id.format",
+    "resources": [
+      {
+        "method": "GET",
+        "description": "Returns information about a user.",
+        "examples": {
+          "request": "curl https://api.versity.io/1/users/1.json",
+          "response": {
+            "id": 1,
+            "username": "dv",
+            "name": {
+              "first": "Dennis",
+              "last": "Vennink"
+            },
+            "gender": "male",
+            "biography": "Interested in learning more about software development.",
+            "location": {
+              "city": "Rotterdam",
+              "country": "The Netherlands"
+            },
+            "organisations": [
+              {
+                "id": 1,
+                "role": "Student"
+              }
+            ],
+            "websites": [
+              {
+                "title": "Portfolio",
+                "url": "http://dennisvennink.com"
+              }
+            ],
+            "online": true,
+            "courses": {
+              "created": [1],
+              "taking": [1]
+            },
+            "count": {
+              "courses": {
+                "created": 1,
+                "taking": 1
+              }
+            },
+            "date": {
+              "creation": "2014-08-07T00:56:25Z",
+              "modified": "2014-08-07T00:56:25Z",
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "endpoint": "/1/organisations/:organisation-id.format",
+    "resources": [
+      {
+        "method": "GET",
+        "description": "Returns information about an organisation.",
+        "examples": {
+          "request": "curl https://api.versity.io/1/organisations/1.json",
+          "response": {
+            "id": 1,
+            "name": "University of Amsterdam",
+            "type": "Institute",
+            "location": {
+              "city": "Amsterdam",
+              "country": "The Netherlands"
+            },
+            "contact": {
+              "address": "Spui 21",
+              "telephone": "31 20 5259111"
+            },
+            "count": {
+              "members": 1
+            },
+            "members": [1],
+            "date": {
+              "creation": "2014-08-07T00:56:25Z",
+              "modified": "2014-08-07T00:56:25Z",
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "endpoint": "/1/curricula/:curriculum-id.format",
+    "resources": [
+      {
+        "method": "GET",
+        "description": "Returns information about a curriculum. A curriculum contains one or more courses.",
+        "examples": {
+          "request": "curl https://api.versity.io/1/curricula/1.json",
+          "response": {
+            "id": 1,
+            "title": "Computer Science",
+            "children": [1]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "endpoint": "/1/courses/:course-id.format",
+    "resources": [
+      {
+        "method": "GET",
+        "description": "Returns information about a course. A course contains one or more chapters.",
+        "examples": {
+          "request": "curl https://api.versity.io/1/courses/1.json",
+          "response": {
+            "id": 1,
+            "title": "Algorithms 1",
+            "children": [1, 2, 3, 4]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "endpoint": "/1/chapters/:chapter-id.format",
+    "resources": [
+      {
+        "method": "GET",
+        "description": "Returns information about a chapter. A chapter contains one or more units.",
+        "examples": {
+          "request": "curl https://api.versity.io/1/chapters/1.json",
+          "response": {
+            "id": 1,
+            "title": "Introduction",
+            "children": [1, 2, 3, 4]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "endpoint": "/1/units/:unit-id.format",
+    "resources": [
+      {
+        "method": "GET",
+        "description": "Returns information about a unit. A unit is the lowest ",
+        "examples": {
+          "request": "curl https://api.versity.io/1/units/1.json",
+          "response": {
+            "id": 1,
+            "title": "Why Study Algorithms?",
+            "content": "Markdown text",
+            "children": []
+          }
+        }
+      }
+    ]
+  },
+  {
+    "endpoint": "/1/progressions/:progression-id.format",
+    "resources": [
+      {
+        "method": "GET",
+        "description": "Returns information about a progression.",
+        "examples": {
+          "request": "curl https://api.versity.io/1/progressions/1.json",
+          "response": {
+            "id": 1,
+            "type": "course",
+            "courseId": 1,
+            "userId": 1,
+            "isCompleted": true,
+            "date": {
+              "creation": "2013-11-01T14:21:11Z",
+              "completion": "2014-02-23T23:45:39Z"
+            },
+            "children": [2, 3, 4]
+          }
+        }
+      }
+    ]
+  }
+]
