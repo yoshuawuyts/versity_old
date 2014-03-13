@@ -151,10 +151,7 @@
             "admins": [1],
             "children": [1, 2, 3, 4],
             "parents": [1, 2],
-            "deadline": {
-              "description": "My fancy description",
-              "timeFromStart": 604800
-            },
+            "deadline": 604800,
             "private": false
           }
         }
@@ -180,10 +177,7 @@
             "admins": [1],
             "children": [1, 2],
             "parents": [1],
-            "deadline": {
-              "description": "My fancy description",
-              "timeFromStart": 604800
-            },
+            "deadline": 604800,
             "private": false
           }
         }
