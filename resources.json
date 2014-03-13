@@ -109,7 +109,7 @@
     ]
   },
   {
-    "endpoint": "/1/curricula/:curriculum-id.format",
+    "endpoint": "/1/programmes/:programme-id.format",
     "resources": [
       {
         "method": "GET",
