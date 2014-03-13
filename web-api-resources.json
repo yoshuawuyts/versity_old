@@ -178,8 +178,8 @@
             "children": [1, 2],
             "parents": [1],
             "deadline": {
-              "description": "My fancy description."
-              "duration": 604800
+              "description": "My fancy description.",
+              "timeFromStart": 604800
             "private": false
           }
         }
