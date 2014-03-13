@@ -222,8 +222,7 @@
           "response": {
             "id": 1,
             "type": "course",
-            "courseId": 1,
-            "userId": 1,
+            "reference": 1,
             "isCompleted": true,
             "date": {
               "creation": "2013-11-01T14:21:11Z",
