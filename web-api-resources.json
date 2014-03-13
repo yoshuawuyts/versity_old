@@ -173,7 +173,7 @@
             },
             "admins": [1],
             "children": [1, 2],
-            "parents": 1,
+            "parent": 1,
             "deadline": {
               "description": "My fancy description.",
               "timeFromStart": 604800
