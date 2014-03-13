@@ -177,6 +177,7 @@
             "deadline": {
               "description": "My fancy description.",
               "timeFromStart": 604800
+            },
             "private": false
           }
         }
