@@ -29,12 +29,10 @@
                 "role": "Student"
               }
             ],
-            "websites": [
-              {
-                "title": "Portfolio",
-                "url": "http://dennisvennink.com"
-              }
-            ],
+            "website": {
+              "title": "Portfolio",
+              "url": "http://dennisvennink.com"
+            },
             "online": true,
             "courses": {
               "managed": [1],
@@ -77,12 +75,10 @@
               "city": "Amsterdam",
               "country": "The Netherlands"
             },
-            "websites": [
-              {
-                "title": "University of Amsterdam",
-                "url": "http://uva.nl"
-              }
-            ],
+            "website": {
+              "title": "University of Amsterdam",
+              "url": "http://uva.nl"
+            },
             "contact": {
               "email": "info@uva.nl",
               "telephone": "31 20 5259111"
