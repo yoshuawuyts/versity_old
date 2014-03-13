@@ -115,7 +115,7 @@
         "method": "GET",
         "description": "Returns information about a programme. A programme contains one or more courses.",
         "examples": {
-          "request": "curl https://api.versity.io/1/curricula/1.json",
+          "request": "curl https://api.versity.io/1/programmes/1.json",
           "response": {
             "id": 1,
             "title": "Computer Science",
