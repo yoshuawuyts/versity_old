@@ -119,6 +119,10 @@
           "response": {
             "id": 1,
             "title": "Computer Science",
+            "owner": {
+              "type": "organisation",
+              "id": 1
+            },
             "admins": [1],
             "children": [1]
           }
