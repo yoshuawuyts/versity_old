@@ -1,77 +1,108 @@
 [
   {
-    "endpoint": "/1/users/:user-id.format",
-    "resources": [
-      {
-        "method": "GET",
-        "description": "Returns information about a user.",
+    "resource": "/v1/users/:user-id.format",
+    "type": "instance",
+    "methods": {
+      "GET": {
+        "description": "Returns an instance containing information about a user.",
         "examples": {
-          "request": "curl https://api.versity.io/1/users/1.json",
+          "request": "curl https://api.versity.io/v1/users/1.json?token=BFNNJ5IE5X4FECW5PLHZ2Y530H3PFDA0G1ZTEBO5K3XUK3P2",
           "response": {
             "id": 1,
-            "username": "dv",
+            "slug": "dv",
             "name": {
               "first": "Dennis",
               "last": "Vennink"
             },
+            "type": "administrator",
             "gender": "male",
             "contact": {
-              "email": "d.vennink@student.tudelft.nl"
+              "email": "d.vennink@student.tudelft.nl",
+              "facebook": "100001630605435"
             },
             "biography": "Interested in learning more about software development.",
             "location": {
               "city": "Rotterdam",
               "country": "The Netherlands"
             },
-            "organisations": [
-              {
-                "id": 1,
-                "role": "Student"
-              }
-            ],
             "website": {
-              "title": "Portfolio",
+              "title": "Online Portfolio",
               "url": "http://dennisvennink.com"
             },
-            "online": true,
-            "courses": {
-              "managed": [1],
-              "taking": [1]
-            },
-            "following": [2],
-            "followers": [2],
             "count": {
-              "courses": {
-                "managed": 1,
-                "taking": 1
+              "users": {
+                "followers": 1,
+                "following": 1
               },
-              "following": 1,
-              "followers": 1
+              "organisations": 1,
+              "courses": {
+                "learning": 1,
+                "teaching": 1
+              }
             },
             "date": {
-              "creation": "2014-08-07T00:56:25Z",
-              "modified": "2014-08-07T00:56:25Z"
-            }
+              "created": "2014-03-13T00:13:37Z",
+              "modified": "2014-04-01T12:34:56Z"
+            },
+            "permissions": {
+              "readable": true,
+              "writable": true
+            },
+            "online": true
           }
         }
       }
-    ]
+    }
   },
+
   {
-    "endpoint": "/1/organisations/:organisation-id.format",
-    "resources": [
-      {
-        "method": "GET",
+    "resource": "/v1/users/:user-id/courses/learning.format",
+    "type": "collection",
+    "methods": {
+      "GET": {
+        "description": "Returns an collection containing information about the courses a user is or was learning.",
+        "examples": {
+          "request": "curl https://api.versity.io/v1/users/1/courses/learning.json?token=BFNNJ5IE5X4FECW5PLHZ2Y530H3PFDA0G1ZTEBO5K3XUK3P2",
+          "response": [
+            "...",
+            "..."
+          ]
+        }
+      }
+    }
+  },
+
+  {
+    "resource": "/v1/users/:user-id/courses/teaching.format",
+    "type": "collection",
+    "methods": {
+      "GET": {
+        "description": "Returns an array containing information about the courses a user is or was teaching.",
+        "examples": {
+          "request": "curl https://api.versity.io/v1/users/1/courses/teaching.json?token=BFNNJ5IE5X4FECW5PLHZ2Y530H3PFDA0G1ZTEBO5K3XUK3P2",
+          "response": [
+            "...",
+            "..."
+          ]
+        }
+      }
+    }
+  },
+
+  {
+    "resource": "/v1/organisations/:organisation-id.format",
+    "type": "object",
+    "methods": {
+      "GET": {
         "description": "Returns information about an organisation.",
         "examples": {
-          "request": "curl https://api.versity.io/1/organisations/1.json",
+          "request": "curl https://api.versity.io/v1/organisations/1.json",
           "response": {
             "id": 1,
+            "slug": "university-of-amsterdam",
             "name": "University of Amsterdam",
             "type": "Institute",
             "location": {
-              "address": "Spui 21",
-              "zip": "1012 WX",
               "city": "Amsterdam",
               "country": "The Netherlands"
             },
@@ -80,39 +111,36 @@
               "url": "http://uva.nl"
             },
             "contact": {
-              "email": "info@uva.nl",
-              "telephone": "31 20 5259111"
+              "email": "info@uva.nl"
             },
-            "courses": {
-              "managed": [1]
-            },
-            "followers": 1,
-            "admins": [1],
-            "members": [1, 2],
             "count": {
               "courses": {
-                "managed": 1
+                "teaching": 1
               },
-              "followers": 1
+              "users": {
+                "members": 1,
+                "followers": 1
+              }
             },
             "date": {
-              "creation": "2014-08-07T00:56:25Z",
-              "modified": "2014-08-07T00:56:25Z"
+              "created": "2014-03-13T00:13:37Z",
+              "modified": "2014-04-01T12:34:56Z"
             },
             "private": false
           }
         }
       }
-    ]
+    }
   },
+
   {
-    "endpoint": "/1/programmes/:programme-id.format",
-    "resources": [
-      {
-        "method": "GET",
+    "endpoint": "/v1/programmes/:programme-id.format",
+    "type": "object",
+    "methods": {
+      "GET": {
         "description": "Returns information about a programme. A programme contains one or more courses.",
         "examples": {
-          "request": "curl https://api.versity.io/1/programmes/1.json",
+          "request": "curl https://api.versity.io/v1/programmes/1.json",
           "response": {
             "id": 1,
             "title": "Computer Science",
@@ -127,16 +155,17 @@
           }
         }
       }
-    ]
+    }
   },
+
   {
-    "endpoint": "/1/courses/:course-id.format",
-    "resources": [
-      {
-        "method": "GET",
+    "endpoint": "/v1/courses/:course-id.format",
+    "type": "object",
+    "methods": {
+      "GET": {
         "description": "Returns information about a course. A course contains one or more chapters.",
         "examples": {
-          "request": "curl https://api.versity.io/1/courses/1.json",
+          "request": "curl https://api.versity.io/v1/courses/1.json",
           "response": {
             "id": 1,
             "title": "Algorithms 1",
@@ -153,16 +182,17 @@
           }
         }
       }
-    ]
+    }
   },
+
   {
-    "endpoint": "/1/chapters/:chapter-id.format",
-    "resources": [
-      {
-        "method": "GET",
+    "endpoint": "/v1/chapters/:chapter-id.format",
+    "type": "object",
+    "methods": {
+      "GET": {
         "description": "Returns information about a chapter. A chapter contains one or more units.",
         "examples": {
-          "request": "curl https://api.versity.io/1/chapters/1.json",
+          "request": "curl https://api.versity.io/v1/chapters/1.json",
           "response": {
             "id": 1,
             "title": "Introduction",
@@ -182,16 +212,17 @@
           }
         }
       }
-    ]
+    }
   },
+
   {
-    "endpoint": "/1/units/:unit-id.format",
-    "resources": [
-      {
-        "method": "GET",
+    "endpoint": "/v1/units/:unit-id.format",
+    "type": "object",
+    "methods": {
+      "GET": {
         "description": "Returns information about a unit.",
         "examples": {
-          "request": "curl https://api.versity.io/1/units/1.json",
+          "request": "curl https://api.versity.io/v1/units/1.json",
           "response": {
             "id": 1,
             "title": "Why Study Algorithms?",
@@ -209,16 +240,17 @@
           }
         }
       }
-    ]
+    }
   },
+
   {
-    "endpoint": "/1/progress/:progress-id.format",
-    "resources": [
-      {
-        "method": "GET",
+    "endpoint": "/v1/progress/:progress-id.format",
+    "type": "object",
+    "methods": {
+      "GET": {
         "description": "Returns information about a progression.",
         "examples": {
-          "request": "curl https://api.versity.io/1/progressions/1.json",
+          "request": "curl https://api.versity.io/v1/progressions/1.json",
           "response": {
             "id": 1,
             "type": "course",
@@ -232,6 +264,6 @@
           }
         }
       }
-    ]
+    }
   }
 ]
