@@ -9,6 +9,7 @@
           "request": "curl https://api.versity.io/v1/users/1.json?token=BFNNJ5IE5X4FECW5PLHZ2Y530H3PFDA0G1ZTEBO5K3XUK3P2",
           "response": {
             "id": 1,
+            "uri": "https://api.versity.io/v1/users/1.json",
             "slug": "dv",
             "name": {
               "first": "Dennis",
@@ -30,13 +31,11 @@
               "url": "http://dennisvennink.com"
             },
             "count": {
-              "users": {
-                "followers": 1,
-                "following": 1
-              },
+              "followers": 1,
+              "following": 1,
               "organisations": 1,
               "courses": {
-                "learning": 1,
+                "learning": 0,
                 "teaching": 1
               }
             },
@@ -56,34 +55,21 @@
   },
 
   {
-    "resource": "/v1/users/:user-id/courses/learning.format",
+    "resource": "/v1/users/:user-id/courses.format",
     "type": "collection",
     "methods": {
       "GET": {
-        "description": "Returns an collection containing information about the courses a user is or was learning.",
+        "description": "Returns a collection containing information about the courses a user is learning and teaching.",
         "examples": {
-          "request": "curl https://api.versity.io/v1/users/1/courses/learning.json?token=BFNNJ5IE5X4FECW5PLHZ2Y530H3PFDA0G1ZTEBO5K3XUK3P2",
-          "response": [
-            "...",
-            "..."
-          ]
-        }
-      }
-    }
-  },
-
-  {
-    "resource": "/v1/users/:user-id/courses/teaching.format",
-    "type": "collection",
-    "methods": {
-      "GET": {
-        "description": "Returns an array containing information about the courses a user is or was teaching.",
-        "examples": {
-          "request": "curl https://api.versity.io/v1/users/1/courses/teaching.json?token=BFNNJ5IE5X4FECW5PLHZ2Y530H3PFDA0G1ZTEBO5K3XUK3P2",
-          "response": [
-            "...",
-            "..."
-          ]
+          "request": "curl https://api.versity.io/v1/users/1/courses.json?token=BFNNJ5IE5X4FECW5PLHZ2Y530H3PFDA0G1ZTEBO5K3XUK3P2",
+          "response": {
+            "learning": [
+              "..."
+            ],
+            "teaching": [
+              "..."
+            ]
+          }
         }
       }
     }
