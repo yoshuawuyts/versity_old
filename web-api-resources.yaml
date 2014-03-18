@@ -1,0 +1,152 @@
+resources:
+  -
+    name: /v1/organisations/:organisation-id.format
+    type: instance
+    requests:
+      -
+        name: GET
+        description: Returns an instance of an organisation.
+        authentication:
+          application: true
+          user: false
+        parameters: ~
+        responses:
+          -
+            status_line:
+              code: 200
+              reason_phrase: OK
+            header: ~
+            message_body: &organisation
+              name: ~
+              type: object
+              description: ~
+              children:
+                -
+                  name: id
+                  type: integer
+                  description: An identifier.
+                -
+                  name: url
+                  type: string
+                  description: A canonical URL.
+                -
+                  name: slug
+                  type: string
+                  description: "A human-readable, URL-friendly identifier."
+                -
+                  name: name
+                  type: string
+                  description: The name of the organisation.
+                -
+                  name: description
+                  type: string
+                  description: A short description of the organisation.
+                -
+                  name: type
+                  type: string
+                  description: The type of the organisation.
+                -
+                  name: location
+                  type: object
+                  description: ~
+                  children:
+                    -
+                      name: city
+                      type: string
+                      description: The city the organisation is located in.
+                    -
+                      name: country
+                      type: string
+                      description: The country the organisation is located in.
+                -
+                  name: website
+                  type: object
+                  description: ~
+                  children:
+                    -
+                      name: title
+                      type: string
+                      description: The title of the organisation's website.
+                    -
+                      name: url
+                      type: string
+                      description: The URL of the organisation's website.
+                -
+                  name: contact
+                  type: object
+                  description: ~
+                  children:
+                    -
+                      name: email
+                      type: string
+                      description: The email of the organisation.
+                -
+                  name: count
+                  type: object
+                  description: ~
+                  children:
+                    -
+                      name: administrators
+                      type: integer
+                      description: The number of administrators.
+                    -
+                      name: courses
+                      type: object
+                      description: ~
+                      children:
+                        -
+                          name: teaching
+                          type: integer
+                          description: The number of courses teached.
+                    -
+                      name: members
+                      type: integer
+                      description: The number of members.
+                -
+                  name: date
+                  type: object
+                  description: ~
+                  children:
+                    -
+                      name: created
+                      type: integer
+                      description: The date of creation since the UNIX epoch.
+                    -
+                      name: modified
+                      type: string
+                      description: The date of modification since the UNIX epoch.
+  -
+    name: /v1/organisations.format
+    type: collection
+    requests:
+      -
+        name: GET
+        description: Returns a collection of organisation instances.
+        authentication:
+          application: true
+          user: false
+        parameters:
+          -
+            name: offset
+            type: integer
+            description: The offset from the first instance.
+            required: false
+            default: 0
+          -
+            name: limit
+            type: integer
+            description: The number of instances to return.
+            required: false
+            default: 10
+        responses:
+          -
+            status_line:
+              code: 200
+              reason_phrase: OK
+            header: ~
+            message_body:
+              name: ~
+              type: array
+              description: ~
+              children:
+                - *organisation
